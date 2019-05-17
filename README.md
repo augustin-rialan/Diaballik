@@ -1,5 +1,4 @@
 
-## Clean your home-dir before starting the project!
 
 ## Layout
 
@@ -12,11 +11,4 @@ It is in charge with providing a REST API and to manage games.
 
 `code-examples` contains several projects that will help in conducting the projet (Angular and Jackson examples).
 
-## For the Web front-end (Angular, https://angular.io/guide/quickstart)
 
-# On your personal computer only (apt-get for Debian)
-sudo dnf install npm docker maven
-Java 8 must be used.
-
-# for installing angular
-sudo npm install -g @angular/cli 

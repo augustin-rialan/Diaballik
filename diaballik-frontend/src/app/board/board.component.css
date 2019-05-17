@@ -1,0 +1,146 @@
+
+div {
+    --size-cell: 80px;
+    --size-board: calc(var(--size-cell) * 7);
+    --border-cell: 0px;
+    margin: auto;
+}
+.tile {
+    position: relative;
+    box-sizing: border-box;
+    border: var(--border-cell) solid;
+    background: url("../../assets/white_tile.png");
+    background-size: cover;
+    width: var(--size-cell);
+    height: var(--size-cell);
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+
+    z-index: 0;
+    
+}
+.oddTile {
+    background: url("../../assets/black_tile.png");
+    background-size: cover;
+}
+.container {
+    position: static;
+    top:100px;
+    display: flex;
+    width: var(--size-board);
+    flex-wrap: wrap;
+}
+.piece {
+    width: var(--size-cell);
+    height: var(--size-cell);
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 2;
+}
+.ball {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: radial-gradient(#FFFFFF, #000000);
+    border-radius: 50%;
+    z-index: 4;
+}
+.joueur1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float:left;
+    margin-left: 37%;
+
+}
+.joueur2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: right;
+    margin-right: 37%;
+
+
+}
+
+.title{
+    text-align: center;
+    right:300px;
+}
+
+.nombredetourjoueur1{
+   
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float:left;
+    margin-left: 40%;
+    margin-top: 100%;
+}
+
+.nombredetourjoueur2{
+    
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: right;;
+    margin-right: 40%; 
+}
+
+p{
+    text-align: center;
+}
+
+.selectable {
+    filter: sepia(100%) contrast(50%) saturate(500%) hue-rotate(63deg);
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
+    text-shadow: 2px 2px 16px #000000;
+    font-size: 50px;
+    z-index: 10;
+}
+
+.title{
+    text-align: right;
+    font-size: 40px;
+    
+}
+
+body {
+    background: #ffffff url("../../assets/background.png") no-repeat left top;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+
+.credit {
+    margin-block-start: 10%;
+    font-size: 20px;
+ }
+ 
+ .saut {
+     opacity: 0;
+ }
+
+ .informations {
+    text-align: center;
+    margin:auto;
+ }
+
+ .nombredetour {
+     text-align: center;
+     margin:auto;
+ }
+
+ .gamesave {
+     font-size: 40px;
+ }
+
+ 

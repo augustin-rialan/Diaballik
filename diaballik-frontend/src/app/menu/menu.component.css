@@ -1,0 +1,84 @@
+p {
+    text-align: center;
+}
+
+body
+{
+    color: white; 
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background: #ffffff url("../../assets/fondnoir.png");
+    background-repeat: repeat repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+img { 
+    width: 300px;
+    position: static;
+    left:200px;
+}
+
+div {
+    position:static;
+    left: 4000px;
+    vertical-align: middle;
+}
+
+
+
+
+.container1{
+    text-align: center;
+}
+
+
+
+.logo {
+   float:left;
+   margin-left: 20%;
+}
+
+.title, .container3 {
+    position: relative;
+    left:-16.7%;
+    font-size: 40px;
+    font-family: Andale Mono, monospace;
+}
+
+input {
+    weight:28px;
+    height:28px;
+    font-size: 50%;
+
+}
+
+select,button {
+    weight:35px;
+    height:35px;
+    font-size: 50%;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+
+.credit {
+   margin-block-start: 10%;
+   font-size: 20px;
+}
+
+.saut {
+    opacity: 0;
+}

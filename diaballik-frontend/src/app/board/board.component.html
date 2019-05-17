@@ -1,0 +1,59 @@
+<body>
+
+  <head>
+    <meta charset="utf-8" />
+    <h1 class="title">Diabalik</h1>
+
+  </head>
+  <p>
+    <input type="text" [value]="savename" (input)="savename=$event.target.value" /><br />
+    <button (click)="saveGame()">Save game</button><br />
+    <span class="gamesaved" *ngIf="savedGame">Game saved !</span>
+  </p>
+
+
+  <h2 *ngIf="winner != null" [style.color]="winningColor()">
+    {{winningPlayer()}} wins !
+  </h2>
+  <div class="informations">
+    <h1 [style.color]="turnColor==colorLeft ? colorLeft : 'black'" class="joueur1">{{playerLeft}}</h1>
+    <h1 [style.color]="turnColor==colorRight ? colorRight : 'black'" class="joueur2">{{playerRight}}</h1>
+  </div>
+  <div class="nombredetour">
+    <img src={{sourceImage}}>
+
+
+
+
+
+  </div>
+
+  <br />
+  <br />
+
+  <div class="container">
+
+
+
+    <ng-container *ngFor="let y of [0,1,2,3,4,5,6]; let even = even">
+      <div class="tile"
+        *ngFor="let x of [0,1,2,3,4,5,6]; let odd = odd"
+        [class.oddTile]="odd != even"
+        [attr.data-x]=x
+        [attr.data-y]=y
+        (click)="tileClick($event)"
+        [class.selectable]="selectedPiece && actionsContains(x, y)"
+        [attr.selectable]="selectedPiece && actionsContains(x, y)">
+        <div class="piece" *ngIf="board[x][y] != null" [style.background-image]="'radial-gradient(#FFFFFF, ' + board[x][y].color + ' 60%)'">
+          <div class="ball" [style.background-image]="'radial-gradient(' + board[x][y].color + ', #000000)'" *ngIf="board[x][y].hasball">
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <p class="credit">(c) 2018 ReboutRialanEntertainment, Inc All rights reserved </p>
+  <p margin-block-start=100% class="saut">Saut de ligne</p>
+
+
+
+</body>

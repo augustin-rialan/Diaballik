@@ -1,0 +1,44 @@
+1
+<body>
+  <span class="logo">
+    <img src="../../assets/logo.png" alt="logo"> </span>
+  <div class="container1">
+    <div class="title">
+      <h1>Diaballik</h1>
+    </div>
+    <div class="container3">
+      Joueur 1:<br />
+      <input type="color" [value]="color1" (input)="color1=$event.target.value" />
+      <input type="text" [value]="name1" (input)="name1=$event.target.value" />
+      <br />
+      Joueur 2:<br />
+      <input type="color" [value]="color2" (input)="color2=$event.target.value" />
+      <input type="text" [value]="name2" (input)="name2=$event.target.value" />
+      <br />
+    </div>
+    AI <input type="checkbox" [checked]="ai" (input)="ai=$event.target.checked" />
+    <br />
+    <select *ngIf="ai" (change)="aitype=$event.target.value">
+      <option value="noob">Noob</option>
+      <option value="starting">Starting</option>
+      <option value="progressive">Progressive</option>
+    </select><br />
+    Scenario:
+    <br />
+    <select (change)="scenario=$event.target.value">
+      <option value="standard">Standard</option>
+      <option value="ball_random">Random ball</option>
+      <option value="enemy_among_us">Enemy among us</option>
+    </select><br />
+    <button (click)="launchGame()" [disabled]="name1 == name2 || color1 == color2">New Game</button><br /><br />
+    <input type="text" [value]="save" (input)="save=$event.target.value"/><br />
+    <button (click)="loadGame()">Load Game</button>
+    <button (click)="replayGame()">Replay Game</button>
+  </div>
+  <p class="credit">(c) 2018 ReboutRialanEntertainment, Inc All rights reserved </p>
+  <p margin-block-start=30% class="saut">Saut de ligne</p>
+
+
+
+
+</body>
